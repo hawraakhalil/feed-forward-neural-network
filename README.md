@@ -8,7 +8,7 @@ This project demonstrates a feed-forward neural network implemented using NumPy.
 
 - **Name**: Adult Census Income Dataset
 - **Source**: [Kaggle - Adult Census Income Dataset](https://www.kaggle.com/datasets/priyamchoksi/adult-census-income-dataset)
-- **Description**: The dataset contains 32,562 instances with 15 attributes, including age, workclass, education, occupation, income, etc. The task is to predict whether a person earns more than \$50K a year.
+- **Description**: The dataset contains 32,562 instances with 14 features, including age, workclass, education, occupation, etc. The task is to predict whether a person earns more than \$50K a year.
 
 ## Model
 
