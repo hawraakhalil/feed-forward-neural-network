@@ -24,8 +24,8 @@ This project demonstrates a feed-forward neural network implemented using NumPy.
 
 ## Files
 
-- `NeuralNetwork.py`: Contains the `NeuralNetwork` class with methods for training and prediction.
-- `BuildDataset.py`: Provides the `build_dataset` function to load and preprocess the Adult dataset.
+- `neural_network.py`: Contains the `NeuralNetwork` class with methods for training and prediction.
+- `build_dataset.py`: Provides the `build_dataset` function to load and preprocess the Adult dataset.
 - `example.ipynb`: A Jupyter notebook demonstrating how to use the neural network to train on the Adult dataset.
 - `README.md`: This file, explaining the project.
 
@@ -33,7 +33,7 @@ This project demonstrates a feed-forward neural network implemented using NumPy.
 
 1. **Download the Dataset**:
 
-   - Go to the [Kaggle Adult Census Income Dataset page](https://www.kaggle.com/uciml/adult-census-income).
+   - Go to the [Kaggle Adult Census Income Dataset page](https://www.kaggle.com/datasets/priyamchoksi/adult-census-income-dataset).
    - Download the `adult.csv` file.
    - The `adult.csv` file is already placed in the project directory.
 
