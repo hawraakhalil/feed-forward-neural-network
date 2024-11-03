@@ -18,20 +18,16 @@ class NeuralNetwork:
             self.weights.append(weight)  # add weights for this layer
             self.biases.append(bias)     # add biases for this layer
         
-    def relu(self, z):
-        # apply ReLU activation function to the input z
+    def relu(self, z): # apply ReLU activation function to the input z
         return np.maximum(0, z)
     
-    def relu_derivative(self, z):
-        # compute the derivative of the ReLU function (used for backpropagation)
+    def relu_derivative(self, z): # compute the derivative of the ReLU function (used for backpropagation)
         return (z > 0).astype(float)
     
-    def sigmoid(self, z):
-        # apply Sigmoid activation function to the input z (used for the output layer in binary classification)
+    def sigmoid(self, z): # apply Sigmoid activation function to the input z (used for the output layer in classification)
         return 1 / (1 + np.exp(-z))
     
-    def forward(self, X):
-        # perform a forward pass through the network, calculating activations for each layer
+    def forward(self, X): # perform a forward pass through the network, calculating activations for each layer
         activations = [X]  # list to store activations of each layer, starting with input X
         zs = []            # list to store the linear transformations before activation
         
@@ -42,16 +38,15 @@ class NeuralNetwork:
             a = self.relu(z)  # apply ReLU activation for hidden layers
             activations.append(a)  # store the activated output
         
-        # output layer: apply Sigmoid activation for binary classification
+        # output layer: apply Sigmoid activation for classification
         z = np.dot(activations[-1], self.weights[-1]) + self.biases[-1]  # linear transformation for output layer
-        zs.append(z)  # store final linear transformation
-        a = self.sigmoid(z)  # apply Sigmoid activation for binary output
+        zs.append(z)
+        a = self.sigmoid(z)
         activations.append(a)  # store output layer activation
         
         return activations, zs
     
-    def backward(self, X, y, activations, zs):
-        # perform backpropagation to compute gradients and update weights and biases
+    def backward(self, X, y, activations, zs): # perform backpropagation to compute gradients and update weights and biases
         m = X.shape[0]  # number of examples in the batch
         
         # compute initial error at output layer

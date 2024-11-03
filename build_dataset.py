@@ -49,7 +49,6 @@ def build_dataset(test_size=0.2, random_state=42):
     
     # split the data into training and testing sets
     # `test_size` specifies the proportion of data to be used for testing
-    # `random_state` ensures reproducibility of the split
     X_train, X_test, y_train, y_test = train_test_split(
         X_scaled, y, test_size=test_size, random_state=random_state
     )
